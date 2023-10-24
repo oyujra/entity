@@ -1,0 +1,14 @@
+create database mvc
+
+use mvc
+
+create table Usuarios(
+Id int identity(1,1) primary key,
+Nombre varchar(50),
+Fecha date,
+Clave varchar(50)
+)
+
+select * from Usuarios
+
+Scaffold-DbContext "server=localhost; database=mvc; integrated security=true;" Microsoft.EntityFrameworkCore.SqlServer -OutPutDir Models
